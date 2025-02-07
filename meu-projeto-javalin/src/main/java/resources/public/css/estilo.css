@@ -1,0 +1,43 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c4c2c2;
+    color: #333;
+}
+  
+header {
+    background-color: #003644;
+    color: white;
+    text-align: center;
+}
+  
+#Menu {
+    display: flex;
+    width: 100%;
+    height: 28px;
+    background-color: #02222b;
+    justify-content: center;
+
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+ 
+footer {
+    background-color: #003644;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} 
