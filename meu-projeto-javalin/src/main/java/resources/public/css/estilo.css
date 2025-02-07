@@ -12,32 +12,82 @@ body {
 }
   
 header {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    height: 75px;
+    display: flex;
+    align-items: center;
     background-color: #003644;
     color: white;
-    text-align: center;
-}
-  
-#Menu {
-    display: flex;
-    width: 100%;
-    height: 28px;
-    background-color: #02222b;
-    justify-content: center;
-
+    justify-content: space-between;
 }
 
-nav a {
-    margin: 0 15px;
-    color: white;
+a {
+    color:#003644;
     text-decoration: none;
 }
  
 footer {
     background-color: #003644;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     position: absolute;
     bottom: 0;
     width: 100%;
 } 
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding-top: 230px;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botao {
+    padding: 8px;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #c4c2c2;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);  /* Cria 2 colunas com 150px de largura */
+    gap: 20px;  /* Espaço entre os itens */
+    text-align: center;
+    align-items: center;
+}
+
+/* Estilo dos itens no grid (botões) */
+.item {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #003644;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.item:hover {
+    background-color: #c4c2c2;
+    transform: scale(1.1); /* Aumenta de tamanho ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
