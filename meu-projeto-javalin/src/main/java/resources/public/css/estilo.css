@@ -16,12 +16,12 @@ header {
     padding-right: 15px;
     padding-bottom: 10px;
     padding-top: 10px;
-    height: 75px;
+    height: 90px;
     display: flex;
     align-items: center;
     background-color: #003644;
     color: white;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 a {
@@ -37,10 +37,31 @@ footer {
     width: 100%;
 } 
 
+.introducao {
+    padding: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.titulo2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #003644;
+}
+
+.descricao {
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 600px;
+}
+
 .content {
     display: flex;
     justify-content: center;
-    padding-top: 230px;
+    align-items: center;
+    height: 700px;
 }
 
 .botoes {
@@ -58,6 +79,12 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+ 
+.botao.index {
+    background-color: #003644;
+    color: white;
+    padding: 25px;
+}
 
 .botao:hover {
     background-color: #c4c2c2;
@@ -67,27 +94,34 @@ footer {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 150px);  /* Cria 2 colunas com 150px de largura */
-    gap: 20px;  /* Espaço entre os itens */
+    grid-template-columns: repeat(2, 150px);  
+    gap: 25px; 
     text-align: center;
     align-items: center;
 }
 
-/* Estilo dos itens no grid (botões) */
 .item {
     padding: 20px;
-    background-color: #ffffff;
-    color: #003644;
+    background-color: #003644;
+    color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Transição suave */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: all 0.3s ease; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.item a {
+    color: #ffffff;
 }
 
 .item:hover {
-    background-color: #c4c2c2;
-    transform: scale(1.1); /* Aumenta de tamanho ao passar o mouse */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    background-color: #125566;
+    transform: scale(1.1); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.textoIndex {
+    max-width: 600px; 
 }
