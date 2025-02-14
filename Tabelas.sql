@@ -3,7 +3,7 @@ CREATE TABLE Pessoa (
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(14) UNIQUE NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
-    data_nascimento VARCHAR(10) NOT NULL,
+    data_nascimento LOCALDATE NOT NULL,
     endereco VARCHAR(100) NOT NULL,
     telefone VARCHAR(15) NOT NULL,
 );
