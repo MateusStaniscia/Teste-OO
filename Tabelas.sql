@@ -11,9 +11,11 @@ CREATE TABLE Pessoa (
 CREATE TABLE Aluno (
     id AUTO_INCREMENT PRIMARY KEY,
     id_pessoa INT UNIQUE NOT NULL,
+    data_nascimento LOCALDATE NOT NULL,
     matricula VARCHAR(20) UNIQUE NOT NULL,
-    FOREIGN KEY (id_pessoa) REFERENCES 
-)
+    FOREIGN KEY (id_pessoa) REFERENCES Pessoa(id) ON DELETE CASCADE,
+    FOREIGN KEY (data_nascimento) REFERENCES Pessoa(data_nascimento) ON DELETE CASCADE,
+);
 
 CREATE TABLE Professor (
     id INT AUTO_INCREMENT PRIMARY KEY,
