@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Aluno</title>
+    <script>
+        function removerAluno(event) {
+            event.preventDefault();
+            const id = document.getElementById("idAluno").value;
+
+            fetch(`/alunos/${id}`, {
+                method: "DELETE"
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => alert("Erro ao remover aluno: " + error));
+        }
+    </script>
+</head>
+<body>
+    <h2>Remover Aluno</h2>
+    <form onsubmit="removerAluno(event)">
+        <label for="idAluno">ID do Aluno:</label>
+        <input type="number" id="idAluno" required>
+        <button type="submit">Remover</button>
+    </form>
+</body>
+</html>

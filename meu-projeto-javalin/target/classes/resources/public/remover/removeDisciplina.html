@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Disciplina</title>
+    <script>
+        function removerDisciplina(event) {
+            event.preventDefault();
+            const id = document.getElementById("idDisciplina").value;
+
+            fetch(`/disciplinas/${id}`, {
+                method: "DELETE"
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => alert("Erro ao remover disciplina: " + error));
+        }
+    </script>
+</head>
+<body>
+    <h2>Remover Disciplina</h2>
+    <form onsubmit="removerDisciplina(event)">
+        <label for="idDisciplina">ID da Disciplina:</label>
+        <input type="number" id="idDisciplina" required>
+        <button type="submit">Remover</button>
+    </form>
+</body>
+</html>
