@@ -1,20 +1,23 @@
 package com.exemplo.models;
 
-public class Aluno extends Pessoa{
+import java.time.LocalDate;
 
-    //Atributos
+public class Aluno extends Pessoa {
+
     private String matricula;
 
-    //Construtor
-    public Aluno(String nome, String cpf, String email, String dataNascimento, String endereco, String telefone) {
-        super(nome, cpf, email, dataNascimento, endereco, telefone);
+    public Aluno() {
+    }
+
+    public Aluno(int id, String nome, String cpf, LocalDate dataNascimento, String endereco,
+                String telefone, String email, String matricula) {
+        super(id, nome, cpf, dataNascimento, endereco, telefone, email);
         this.matricula = matricula;
     }
 
     public String getMatricula() {
         return matricula;
     }
-
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }

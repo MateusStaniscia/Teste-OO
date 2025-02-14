@@ -1,22 +1,24 @@
 package com.exemplo.models;
 
-public class Professor extends Pessoa{
+import java.time.LocalDate;
 
-    //Atributos
+public class Professor extends Pessoa {
+
     private String siape;
-    
-    //Construtor
-    public Professor(String nome, String cpf, String email, String dataNascimento, String endereco, String telefone) {
-        super(nome, cpf, email, dataNascimento, endereco, telefone);
+
+    public Professor(){
+    }
+
+    public Professor(int id, String nome, String cpf, LocalDate dataNascimento, String endereco,
+                     String telefone, String email, String siape) {
+        super(id, nome, cpf, dataNascimento, endereco, telefone, email);
         this.siape = siape;
     }
 
     public String getSiape() {
         return siape;
     }
-
     public void setSiape(String siape) {
         this.siape = siape;
     }
-
 }

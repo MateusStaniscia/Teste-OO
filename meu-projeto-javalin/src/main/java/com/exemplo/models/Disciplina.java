@@ -1,27 +1,36 @@
 package com.exemplo.models;
 
 public class Disciplina {
-    
-    //Atributos
+    private int id;
     private String codigo;
     private String nome;
     private String ementa;
-    private double cargaHoraria;
-    private String responsavel;
-
-    //Construtor
-    public Disciplina(double cargaHoraria, String codigo, String ementa, String nome, String responsavel) {
-        this.cargaHoraria = cargaHoraria;
+    private int cargaHoraria;
+    private int professorId; 
+ 
+    public Disciplina() {
+    }
+    
+    public Disciplina(int id, String codigo, String nome, String ementa, int cargaHoraria, int professorId) {
+        this.id = id;
         this.codigo = codigo;
-        this.ementa = ementa;
         this.nome = nome;
-        this.responsavel = responsavel;
+        this.ementa = ementa;
+        this.cargaHoraria = cargaHoraria;
+        this.professorId = professorId;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCodigo() {
         return codigo;
     }
-
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
@@ -29,7 +38,6 @@ public class Disciplina {
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -37,25 +45,21 @@ public class Disciplina {
     public String getEmenta() {
         return ementa;
     }
-
     public void setEmenta(String ementa) {
         this.ementa = ementa;
     }
 
-    public double getCargaHoraria() {
+    public int getCargaHoraria() {
         return cargaHoraria;
     }
-
-    public void setCargaHoraria(double cargaHoraria) {
+    public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
 
-    public String getResponsavel() {
-        return responsavel;
+    public int getProfessorId() {
+        return professorId;
     }
-
-    public void setResponsavel(String responsavel) {
-        this.responsavel = responsavel;
+    public void setProfessorId(int professorId) {
+        this.professorId = professorId;
     }
-    
 }
